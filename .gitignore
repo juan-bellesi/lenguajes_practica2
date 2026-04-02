@@ -1,0 +1,54 @@
+# =========================
+# Entorno virtual
+# =========================
+.venv/
+venv/
+env/
+
+# =========================
+# Python compilado
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Archivos del sistema
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Archivos de logs
+# =========================
+*.log
+
+# =========================
+# Archivos temporales
+# =========================
+*.tmp
+*.swp
+
+# =========================
+# Configuración de IDEs (opcional)
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Archivos de build (por si aparecen)
+# =========================
+build/
+dist/
+*.egg-info/
+
+# =========================
+# Variables de entorno
+# =========================
+.env
