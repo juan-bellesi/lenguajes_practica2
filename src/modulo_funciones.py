@@ -20,6 +20,7 @@ def procesar_ronda(ronda):
 #Determina ganador
 def obtener_ganador(resultados):
     return max(resultados, key=resultados.get)
+
 #Inicializar estadisticas
 def inicializar_stats(cocineros):
     stats = {}
