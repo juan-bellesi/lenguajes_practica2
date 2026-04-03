@@ -26,14 +26,19 @@ idea.
 Namespaces are one honking great idea -- let's do more of 
 those!"""
 
-cant_lineas = 1
 lista_palabras = text.split()
 cant_palabras = len(lista_palabras)
-promedio = 1
-lineas_maximas = 1
+lineas = text.split ("/n")
+cant_lineas = len(lineas)
+promedio = cant_palabras / cant_lineas
 
-print(f"La cantidad total de líneas es: {cant_lineas}")
+print(f"La cantidad total de renglones es: {cant_lineas}")
 print(f"La cantidad total de palabras es: {cant_palabras}")
-print(f"El promedio de palabras por renglón es: {promedio}")
-print(f"La cantidad de renglones con más palabras que el promedio es: {lineas_maximas}")
-print(dir(text))
+print(f"El promedio de palabras por renglón es: {promedio:.2f}")
+
+for linea in lineas:
+    palabras_lineas = linea.split()
+    cantidad = len(palabras_lineas)
+
+if cantidad > promedio:
+    print(f'- "{linea}" ({cantidad} palabras)')
