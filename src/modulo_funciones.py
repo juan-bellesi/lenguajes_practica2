@@ -53,3 +53,17 @@ def mostrar_ranking(stats):
   
     for nombre, datos in ranking:
         print(nombre, datos['total'])
+
+
+#Muestra tabla final
+def mostrar_tabla_final(stats):
+    ranking = sorted(stats.items(), key=lambda x: x[1]['total'], reverse=True)
+    
+    print("\nTabla final:")
+    print("Cocinero       Puntaje   Rondas ganadas   Mejor ronda   Promedio")
+    print("-" * 65)
+    
+    for nombre, datos in ranking:
+        promedio = datos['total'] / datos['rondas']
+        
+        print(f"{nombre:<15} {datos['total']:<10} {datos['rondas_ganadas']:<17} {datos['mejor_ronda']:<13} {promedio:.1f}")
